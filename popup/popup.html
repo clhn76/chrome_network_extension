@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>My Extension Popup</title>
-  </head>
-  <body>
-    <h1>Hi HI, Extension!</h1>
-    <div id="networkInfo"></div>
-    <script src="popup.js"></script>
-  </body>
+<head>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <h2>Security Headers</h2>
+  <div>
+    <label class="switch">
+      <input type="checkbox" id="httpsSwitch">
+      <span class="slider"></span>
+    </label>
+    <span>HTTPS Enforcement</span>
+  </div>
+  <div>
+    <label class="switch">
+      <input type="checkbox" id="cspSwitch">
+      <span class="slider"></span>
+    </label>
+    <span>CSP Enforcement</span>
+  </div>
+  <script src="popup.js"></script>
+</body>
 </html>
