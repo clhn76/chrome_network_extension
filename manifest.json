@@ -6,10 +6,23 @@
   "action": {
     "default_popup": "popup/popup.html"
   },
-  "permissions": ["webRequest", "declarativeNetRequest"],
+  "permissions": ["webRequest", "declarativeNetRequest", "storage"],
   "host_permissions": ["<all_urls>"],
   "background": {
-    "service_worker": "background/index.js",
-    "type": "module"
+    "service_worker": "background/index.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "https_ruleset",
+        "enabled": true,
+        "path": "rules/https_rules.json"
+      },
+      {
+        "id": "csp_ruleset",
+        "enabled": true,
+        "path": "rules/csp_rules.json"
+      }
+    ]
   }
 }
